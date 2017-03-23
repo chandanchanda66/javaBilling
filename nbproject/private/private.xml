@@ -4,9 +4,22 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/F:/New%20Folder/JavaApplication6/src/javaapplication6/mainWin.java</file>
-            <file>file:/F:/New%20Folder/JavaApplication6/src/javaapplication6/Adminview.java</file>
-            <file>file:/F:/New%20Folder/JavaApplication6/src/javaapplication6/JavaApplication6.java</file>
+            <file>file:/F:/New%20Folder/JavaApplication6/src/javaapplication6/addingclients.java</file>
+            <file>file:/F:/New%20Folder/JavaApplication6/src/javaapplication6/customerview.java</file>
+            <file>file:/F:/New%20Folder/JavaApplication6/src/javaapplication6/read.java</file>
+            <file>file:/F:/New%20Folder/JavaApplication6/src/javaapplication6/ViewClients.java</file>
+            <file>file:/F:/New%20Folder/JavaApplication6/src/javaapplication6/Mailer.java</file>
+            <file>file:/F:/New%20Folder/JavaApplication6/src/javaapplication6/addingitems.java</file>
+            <file>file:/F:/New%20Folder/JavaApplication6/src/javaapplication6/mailattach.java</file>
             <file>file:/F:/New%20Folder/JavaApplication6/src/javaapplication6/forgetdetails.java</file>
+            <file>file:/F:/New%20Folder/JavaApplication6/src/javaapplication6/Bill.java</file>
+            <file>file:/F:/New%20Folder/JavaApplication6/src/javaapplication6/Adminview.java</file>
+            <file>file:/F:/New%20Folder/JavaApplication6/src/javaapplication6/Clientview.java</file>
+            <file>file:/F:/New%20Folder/JavaApplication6/src/javaapplication6/Gmail.java</file>
+            <file>file:/F:/New%20Folder/JavaApplication6/src/javaapplication6/JavaApplication6.java</file>
+            <file>file:/F:/New%20Folder/JavaApplication6/src/javaapplication6/viewitems.java</file>
+            <file>file:/F:/New%20Folder/JavaApplication6/src/mail/mail.java</file>
+            <file>file:/F:/New%20Folder/JavaApplication6/src/javaapplication6/inbox.java</file>
         </group>
     </open-files>
 </project-private>

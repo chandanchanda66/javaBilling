@@ -30,18 +30,19 @@ import java.util.Properties;
  */
 public class JavaApplication6 {
     public static mainWin m = null;
+public static framee f1=new framee(); 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        framee f=new framee();
-        f.create();
+        f1.create();
     }
+    
 }
- class framee implements ActionListener,Runnable
+ class framee  implements ActionListener,Runnable 
 {
-    JFrame f; 
+ public static   JFrame f; 
     JButton b;
     JButton b1;
      JLabel l1;
@@ -49,8 +50,9 @@ public class JavaApplication6 {
     JLabel l;
     JPanel p;
     ImageIcon[] j=new ImageIcon[10];
-    
+  
     Color c[]={Color.BLUE,Color.ORANGE,Color.GREEN,Color.YELLOW,Color.red};
+    
     framee()
             {
                 try {
@@ -173,6 +175,11 @@ void changecolor()
                          } catch (InterruptedException ex) {
                              Logger.getLogger(framee.class.getName()).log(Level.SEVERE, null, ex);
                          }
-                     }        
+                     }
     }
-}
+           public void dispose()
+           {
+             this.dispose();
+           }
+    }
+

@@ -26,6 +26,9 @@ public class mainWin extends javax.swing.JFrame {
     /**
      * Creates new form main
      */
+    String admin;
+public static boolean inboxfromclientview=true; 
+public static boolean clientviewitems=true; 
     public mainWin() {
         initComponents();
       
@@ -157,30 +160,81 @@ public class mainWin extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+ 
+        
+        if(this.getTitle()=="Admin Login")
+        {
           try {
+              
             // TODO add your handling code here
             Class.forName("com.mysql.jdbc.Driver");
                            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/billing", "root", "pass");
                    Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery("Select * from admin");
+                   String u = jTextField1.getText();
+                   String p = jPasswordField1.getText();
+            ResultSet rs = stmt.executeQuery("Select count(*) as cnt from admin where username='" + u +"' and password='" + p + "'");
+             //int count = 0;          
              while(rs.next()) {
-                if((jTextField1.getText().equals(rs.getString(2)))||(jPasswordField1.getText().equals(rs.getString(3))))
+                if(rs.getInt("cnt") != 0)
                 {
-                  new Adminview().setVisible(true);  
-                  
-                }
-                else
-                {
-                    JOptionPane.showMessageDialog(null,"Invalid UserName or Password"); 
+                 
+                  new Adminview().setVisible(true);
+                     framee.f.setVisible(false);
+                  this.dispose();
+                   
+                 } else {
+                    JOptionPane.showMessageDialog(null,"Invalid UserName or Password");
+                    jTextField1.setText("");
+                    jPasswordField1.setText("");
                 }
             }
+          
+             
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(forgetdetails.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
             Logger.getLogger(forgetdetails.class.getName()).log(Level.SEVERE, null, ex);
         }
+         
     }//GEN-LAST:event_jButton1ActionPerformed
 
+        else if(this.getTitle()=="Client Login")
+    {
+       try {
+           
+            // TODO add your handling code here
+            Class.forName("com.mysql.jdbc.Driver");
+                           Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/billing", "root", "pass");
+                   Statement stmt = conn.createStatement();
+           String u = jTextField1.getText();
+                   String p = jPasswordField1.getText();
+            ResultSet rs = stmt.executeQuery("Select count(*) as cnt from loginusers where username='" + u +"' and password='" + p + "'");
+             //int count = 0;          
+             while(rs.next()) {
+                if(rs.getInt("cnt") != 0)
+                {
+                  new Clientview().setVisible(true);
+                     framee.f.setVisible(false);
+                  this.dispose();
+                 } else {
+                    JOptionPane.showMessageDialog(null,"Invalid UserName or Password");
+                    jTextField1.setText("");
+                    jPasswordField1.setText("");
+                }
+             
+             }
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(forgetdetails.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(forgetdetails.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }
+    else
+    {
+    JOptionPane.showMessageDialog(null,"Invalid UserName or Password"); 
+    }
+    }
     /**
      * @param args the command line arguments
      */

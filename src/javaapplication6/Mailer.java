@@ -34,15 +34,14 @@ class Mailer{
            
           });    
           //compose message    
-          try {    
+          try 
+          {    
            MimeMessage message = new MimeMessage(session); 
-           System.out.println(session);
-           System.out.println(message);
-           message.addRecipient(Message.RecipientType.TO,new InternetAddress(to));    
+          message.addRecipient(Message.RecipientType.TO,new InternetAddress(to));    
            message.setSubject(sub);    
            message.setText(msg);    
            //send message  
-            System.out.println(msg);
+          
            Transport.send(message);
            System.out.println("message sent successfully");   
           }catch (MessagingException e) {

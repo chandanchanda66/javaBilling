@@ -5,6 +5,7 @@
  */
 package javaapplication6;
 
+import java.awt.Dimension;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -26,7 +27,15 @@ public class addingclients extends javax.swing.JFrame {
      */
     public addingclients() {
         initComponents();
+        this.setTitle("Adding clients");
         this.setExtendedState(MAXIMIZED_BOTH);
+        jTextField1.setPreferredSize(new Dimension(150,30));
+        jTextField2.setPreferredSize(new Dimension(150,30));
+        jTextField3.setPreferredSize(new Dimension(150,30));
+        jPasswordField1.setPreferredSize(new Dimension(150,30));
+        jButton1.setPreferredSize(new Dimension(50,50));
+        jButton2.setPreferredSize(new Dimension(50,50));
+        
     }
 
     /**
@@ -56,21 +65,25 @@ public class addingclients extends javax.swing.JFrame {
 
         java.awt.GridBagLayout jPanel1Layout = new java.awt.GridBagLayout();
         jPanel1Layout.columnWidths = new int[] {200};
+        jPanel1Layout.rowHeights = new int[] {0};
         jPanel1.setLayout(jPanel1Layout);
 
         jLabel1.setText("USERNAME");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 0;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 10, 20);
+        gridBagConstraints.ipadx = 20;
+        gridBagConstraints.ipady = 20;
+        gridBagConstraints.insets = new java.awt.Insets(20, 0, 20, 0);
         jPanel1.add(jLabel1, gridBagConstraints);
 
         jLabel2.setText("PASSWORD");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 1;
-        gridBagConstraints.ipadx = 15;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 20, 0);
+        gridBagConstraints.ipadx = 20;
+        gridBagConstraints.ipady = 20;
+        gridBagConstraints.insets = new java.awt.Insets(20, 0, 20, 0);
         jPanel1.add(jLabel2, gridBagConstraints);
 
         jLabel3.setText("EMAIL");
@@ -78,14 +91,17 @@ public class addingclients extends javax.swing.JFrame {
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.ipadx = 40;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 20, 0);
+        gridBagConstraints.ipady = 20;
+        gridBagConstraints.insets = new java.awt.Insets(20, 0, 20, 0);
         jPanel1.add(jLabel3, gridBagConstraints);
 
         jLabel4.setText("PHONE");
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 3;
-        gridBagConstraints.ipadx = 35;
+        gridBagConstraints.ipadx = 40;
+        gridBagConstraints.ipady = 20;
+        gridBagConstraints.insets = new java.awt.Insets(20, 0, 20, 0);
         jPanel1.add(jLabel4, gridBagConstraints);
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
@@ -98,14 +114,14 @@ public class addingclients extends javax.swing.JFrame {
         gridBagConstraints.gridy = 0;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.ipadx = 150;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 10, 0);
+        gridBagConstraints.insets = new java.awt.Insets(20, 0, 20, 0);
         jPanel1.add(jTextField1, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
         gridBagConstraints.ipadx = 100;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 20, 0);
+        gridBagConstraints.insets = new java.awt.Insets(20, 0, 20, 0);
         jPanel1.add(jTextField2, gridBagConstraints);
 
         jTextField3.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -120,12 +136,13 @@ public class addingclients extends javax.swing.JFrame {
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 3;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
+        gridBagConstraints.insets = new java.awt.Insets(20, 0, 20, 0);
         jPanel1.add(jTextField3, gridBagConstraints);
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 1;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        gridBagConstraints.insets = new java.awt.Insets(0, 0, 20, 0);
+        gridBagConstraints.insets = new java.awt.Insets(20, 0, 20, 0);
         jPanel1.add(jPasswordField1, gridBagConstraints);
 
         jButton1.setForeground(new java.awt.Color(0, 51, 204));
@@ -136,8 +153,9 @@ public class addingclients extends javax.swing.JFrame {
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridx = 0;
         gridBagConstraints.gridy = 4;
+        gridBagConstraints.ipadx = 50;
+        gridBagConstraints.ipady = 10;
         gridBagConstraints.insets = new java.awt.Insets(20, 0, 20, 0);
         jPanel1.add(jButton1, gridBagConstraints);
 
@@ -152,8 +170,9 @@ public class addingclients extends javax.swing.JFrame {
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 4;
         gridBagConstraints.gridwidth = 10;
-        gridBagConstraints.gridheight = 10;
-        gridBagConstraints.ipadx = 1;
+        gridBagConstraints.ipadx = 50;
+        gridBagConstraints.ipady = 10;
+        gridBagConstraints.insets = new java.awt.Insets(20, 0, 20, 0);
         jPanel1.add(jButton2, gridBagConstraints);
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
@@ -192,6 +211,7 @@ String temp;
         // TODO add your handling code here:
        
                 new Adminview().setVisible(true);
+                this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -205,10 +225,13 @@ statement.setString(2,jPasswordField1.getText());
 statement.setString(3,jTextField2.getText());
 statement.setString(4,jTextField3.getText());
 statement.executeUpdate();
-Mailer.send("chandanchanda66@gmail.com","chandan-2409",jTextField2.getText(),"Client Added","Welcome To abc Group Of Company"+
-        "\nYour UserName"+jTextField1.getText()+"Password"+jPasswordField1.getText());  
+Mailer.send("bluepearl273@gmail.com","bluepearl123",jTextField2.getText(),"Client Added","Welcome To abc Group Of Company"+
+        "\nYour UserName :"+jTextField1.getText()+"\nPassword :"+jPasswordField1.getText());  
  JOptionPane.showMessageDialog(null,"Client Added"); 
-
+jPasswordField1.setText("");
+jTextField1.setText("");
+jTextField2.setText("");
+jTextField3.setText("");
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(null,ex); 
         }
